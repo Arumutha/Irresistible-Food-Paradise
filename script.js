@@ -1,9 +1,9 @@
 <script>
-   const buttons = document.querySelectorAll(".btn-primary, .btn-secondary, .order-btn");
+const orderButtons = document.querySelectorAll(".order-btn, .btn-primary");
 
-buttons.forEach(function(btn) 
-    btn.addEventListener("click", function () {
-        alert("🚀 Feature coming soon!")
-    });
+orderButtons.forEach((btn)
+    btn.addEventListener("click", ()
+        alert("🍔 Thanks! Your order request is received. We will contact you soon.");
+    );
 );
 </script>
