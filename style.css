@@ -1,41 +1,11 @@
 body{
     font-family:'Poppins',sans-serif;
 }
-.navbar{
-    position:sticky;
-    top:0;
-    z-index:1000;
-}
-.menu-toggle{
-    display:none;
-    font-size:32px;
-    color:white;
-    cursor:pointer;
-}
-
-/* Mobile */
-@media (max-width: 768px) {
-
-    .menu-toggle {
-        display: block;
-    }
-
-    .nav-links {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-    }
-
-    .nav-links.active {
-        display: flex;
-    }
-}
-
 /* =========================
-   RESET DEFAULT STYLES
+   RESET
 ========================= */
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -45,11 +15,16 @@ body{
    NAVBAR
 ========================= */
 
-.navbar{
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #121212;
+
+    background: #121212;
     padding: 18px 60px;
 }
 
@@ -57,38 +32,42 @@ body{
    LOGO
 ========================= */
 
-.logo{
+.logo {
     display: flex;
     align-items: center;
     gap: 10px;
 }
 
-.logo img{
+.logo img {
     width: 60px;
 }
 
-.logo h2{
+.logo h2 {
     color: white;
 }
 
 /* =========================
-   NAVIGATION LINKS
+   NAV LINKS
 ========================= */
 
-.nav-links{
+.nav-links {
     display: flex;
     list-style: none;
     gap: 30px;
 }
 
-.nav-links a{
+.nav-links li {
+    list-style: none;
+}
+
+.nav-links a {
     text-decoration: none;
     color: white;
     font-size: 18px;
     transition: 0.3s;
 }
 
-.nav-links a:hover{
+.nav-links a:hover {
     color: orange;
 }
 
@@ -96,17 +75,66 @@ body{
    ORDER BUTTON
 ========================= */
 
-.order-btn{
+.order-btn {
     text-decoration: none;
-    background-color: #FF6B35;
+    background: #FF6B35;
     color: white;
     padding: 12px 25px;
     border-radius: 30px;
     transition: 0.3s;
 }
 
-.order-btn:hover{
-    background-color: #ff8c5a;
+.order-btn:hover {
+    background: #ff8c5a;
+}
+
+/* =========================
+   MENU TOGGLE
+========================= */
+
+.menu-toggle {
+    display: none;
+    font-size: 32px;
+    color: white;
+    cursor: pointer;
+    user-select: none;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width:768px){
+
+    .navbar{
+        padding:15px 20px;
+        position:relative;
+    }
+
+    .menu-toggle{
+        display:block;
+    }
+
+    .nav-links{
+        display:none;
+        flex-direction:column;
+        position:absolute;
+        top:100%;
+        left:0;
+        width:100%;
+        background:#121212;
+        padding:20px 0;
+        text-align:center;
+        gap:20px;
+    }
+
+    .nav-links.active{
+        display:flex;
+    }
+
+    .order-btn{
+        display:none;
+    }
 }
 /* =========================
    HERO SECTION
