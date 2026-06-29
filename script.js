@@ -1,9 +1,12 @@
-<script>
-const orderButtons = document.querySelectorAll(".order-btn, .btn-primary");
+const menuToggle = document.getElementById("menu-toggle");
+const navLinks = document.getElementById("nav-links");
 
-orderButtons.forEach((btn)
-    btn.addEventListener("click", ()
-        alert("🍔 Thanks! Your order request is received. We will contact you soon.");
-    );
-);
-</script>
+menuToggle.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+
+    if (menuToggle.innerHTML === "☰") {
+        menuToggle.innerHTML = "✖";
+    } else {
+        menuToggle.innerHTML = "☰";
+    }
+});

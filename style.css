@@ -6,10 +6,29 @@ body{
     top:0;
     z-index:1000;
 }
-html{
-    scroll-behavior:smooth;
+.menu-toggle{
+    display:none;
+    font-size:32px;
+    color:white;
+    cursor:pointer;
 }
 
+/* Mobile */
+
+@media(max-width:768px){
+
+    .navbar{
+
+        padding:15px 25px;
+        position:relative;
+
+    }
+}
+.menu-toggle{
+
+        display:block;
+
+    }
 
 /* =========================
    RESET DEFAULT STYLES
@@ -29,9 +48,7 @@ html{
     display: flex;
     justify-content: space-between;
     align-items: center;
-
     background-color: #121212;
-
     padding: 18px 60px;
 }
 
@@ -82,11 +99,8 @@ html{
     text-decoration: none;
     background-color: #FF6B35;
     color: white;
-
     padding: 12px 25px;
-
     border-radius: 30px;
-
     transition: 0.3s;
 }
 
