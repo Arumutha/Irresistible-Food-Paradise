@@ -14,21 +14,22 @@ body{
 }
 
 /* Mobile */
+@media (max-width: 768px) {
 
-@media(max-width:768px){
+    .menu-toggle {
+        display: block;
+    }
 
-    .navbar{
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
 
-        padding:15px 25px;
-        position:relative;
-
+    .nav-links.active {
+        display: flex;
     }
 }
-.menu-toggle{
-
-        display:block;
-
-    }
 
 /* =========================
    RESET DEFAULT STYLES
